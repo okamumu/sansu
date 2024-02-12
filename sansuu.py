@@ -14,8 +14,8 @@ def hikisan1(m, seed):
     random.seed(seed)
     questions_set = set()
     while len(questions_set) < m:
-        num1 = random.randint(0, 9)
-        num2 = random.randint(0, 9)
+        num1 = random.randint(1, 9)
+        num2 = random.randint(1, 9)
         (num1, num2) = (num1, num2) if num1 <= num2 else (num2, num1)
         questions_set.add((num1 + num2, num2))
     questions_list = [f"{q[0]} - {q[1]} = ?" for q in questions_set]
