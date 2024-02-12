@@ -1,0 +1,41 @@
+/* スタイルのベース設定 */
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* スマートフォン向けのスタイル（デフォルト） */
+.message {
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* タブレット向けのスタイル */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+    .message {
+        margin: 20px 0;
+        padding: 20px;
+    }
+}
+
+/* デスクトップ向けのスタイル */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+    .message {
+        margin: 30px 0;
+        padding: 30px;
+    }
+}
