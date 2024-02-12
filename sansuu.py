@@ -1,6 +1,7 @@
 import random
 
-def tashisan1(m):
+def tashisan1(m, seed):
+    random.seed(seed)
     questions_set = set()
     while len(questions_set) < m:
         num1 = random.randint(0, 9)
@@ -9,7 +10,8 @@ def tashisan1(m):
     questions_list = [f"{q[0]} + {q[1]} = ?" for q in questions_set]
     return questions_list
 
-def hikisan1(m):
+def hikisan1(m, seed):
+    random.seed(seed)
     questions_set = set()
     while len(questions_set) < m:
         num1 = random.randint(0, 9)
@@ -19,7 +21,8 @@ def hikisan1(m):
     questions_list = [f"{q[0]} - {q[1]} = ?" for q in questions_set]
     return questions_list
 
-def kakesan1(m):
+def kakesan1(m, seed):
+    random.seed(seed)
     questions_set = set()
     while len(questions_set) < m:
         num1 = random.randint(1, 9)
@@ -29,7 +32,8 @@ def kakesan1(m):
     questions_list = [f"{q[0]} × {q[1]} = ?" for q in questions_set]
     return questions_list
 
-def warisan1(m):
+def warisan1(m, seed):
+    random.seed(seed)
     division_questions_set = set()
     while len(division_questions_set) < m:
         num1 = random.randint(1, 9)  # Dividend
